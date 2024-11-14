@@ -1,0 +1,103 @@
+/* Styles généraux pour la page de profil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#header-container {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Styles pour le formulaire de profil */
+#profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-form label {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#profile-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+#save-profile-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#save-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour les messages d'erreur ou de succès */
+.alert {
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsivité pour les petites écrans */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  #profile-form input,
+  #save-profile-btn {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  #save-profile-btn {
+    padding: 10px 15px;
+  }
+}

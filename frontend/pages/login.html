@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EzyBank - Connexion</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div></div>
+      <div class="card">
+        <h1 class="brand-name">EzyBank</h1>
+        <p class="page-title">Connexion</p>
+
+        <form id="login-form" class="login-form">
+          <label for="email" class="input-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Votre email"
+            class="input-field"
+            required
+          />
+
+          <label for="password" class="input-label">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="********"
+            class="input-field"
+            required
+          />
+
+          <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+
+          <button type="submit" class="action-button">Connexion</button>
+        </form>
+
+        <p class="register-prompt">
+          Vous n’avez pas de compte ?
+          <a href="./register.html">S’inscrire</a>
+        </p>
+      </div>
+      <div></div>
+    </div>
+
+    <!-- Lien vers le fichier JS -->
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

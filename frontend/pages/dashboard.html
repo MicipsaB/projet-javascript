@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EzyBank - Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="dashboard-container">
+      <h1>
+        Bienvenue sur votre Dashboard,
+        <span id="user-name">Nom d'utilisateur</span>
+      </h1>
+
+      <!-- Balance Overview -->
+      <section class="balance-section">
+        <h2>Solde total</h2>
+        <p id="total-balance">0,00 €</p>
+      </section>
+
+      <!-- Account List -->
+      <section class="accounts-section">
+        <div class="section-header">
+          <h2>Vos Comptes</h2>
+          <button id="add-account-btn">+ Ajouter un compte</button>
+        </div>
+        <div id="accounts-list">
+          <!-- Accounts will be dynamically inserted here -->
+        </div>
+      </section>
+
+      <!-- Transaction History -->
+      <section class="transactions-section">
+        <h2>Historique des Transactions</h2>
+        <button id="download-csv-btn">Télécharger en CSV</button>
+        <div id="transactions-list">
+          <!-- Transactions will be dynamically inserted here -->
+        </div>
+      </section>
+
+      <!-- Notifications -->
+    </div>
+
+    <!-- Modal for adding a new account -->
+    <div id="add-account-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Ajouter un compte</h2>
+        <form id="add-account-form">
+          <label for="account-name">Nom du compte</label>
+          <input
+            type="text"
+            id="account-name"
+            placeholder="Nom du compte"
+            required
+          />
+
+          <label for="account-type">Type de compte</label>
+          <select id="account-type" required>
+            <option value="courant">Courant</option>
+            <option value="épargne">Épargne</option>
+            <option value="business">Business</option>
+          </select>
+
+          <label for="initial-deposit">Dépôt initial (€)</label>
+          <input
+            type="number"
+            id="initial-deposit"
+            placeholder="Dépôt initial"
+            min="0"
+            required
+          />
+
+          <label for="low-balance-threshold">Seuil de solde bas (€)</label>
+          <input
+            type="number"
+            id="low-balance-threshold"
+            placeholder="Seuil de solde bas"
+            min="0"
+            required
+          />
+
+          <button type="submit">Ajouter le compte</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+  </body>
+</html>

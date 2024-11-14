@@ -1,0 +1,49 @@
+/* header.css */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1f36; /* Bleu nuit */
+  padding: 15px 30px;
+  color: white;
+}
+
+.header-container .logo h1 {
+  font-size: 1.8em;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-container .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-container .user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#user-name-h {
+  font-size: 1em;
+}
+
+#logout-btn {
+  background-color: white;
+  color: #1a1f36; /* Bleu nuit */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#logout-btn:hover {
+  background-color: #1a1f36;
+  color: white;
+  border: 1px solid white;
+}

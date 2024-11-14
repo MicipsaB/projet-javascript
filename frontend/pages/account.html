@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EzyBank - Détails du Compte</title>
+    <link rel="stylesheet" href="../styles/account.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="account-container">
+      <h1>Détails du Compte</h1>
+      <div id="account-details"></div>
+
+      <!-- Formulaire de transaction -->
+      <h2>Effectuer une Transaction</h2>
+      <form id="transaction-form">
+        <label for="transaction-type">Type de transaction :</label>
+        <select id="transaction-type">
+          <option value="deposit">Dépôt</option>
+          <option value="withdrawal">Retrait</option>
+        </select>
+
+        <label for="transaction-amount">Montant (€):</label>
+        <input type="number" id="transaction-amount" min="0" required />
+
+        <button type="submit">Confirmer la transaction</button>
+      </form>
+
+      <!-- Bouton de suppression du compte -->
+      <button id="delete-account-btn">Supprimer le compte</button>
+
+      <!-- Filtre des transactions -->
+      <h2>Filtrer l'historique des transactions</h2>
+      <form id="filter-form">
+        <label for="filter-type">Type de transaction :</label>
+        <select id="filter-type">
+          <option value="">Tous</option>
+          <option value="deposit">Dépôt</option>
+          <option value="withdrawal">Retrait</option>
+        </select>
+
+        <label for="filter-start-date">Période :</label>
+        <input type="text" id="filter-start-date" />
+
+        <button type="submit">Filtrer</button>
+      </form>
+
+      <!-- Historique des transactions -->
+      <h2>Historique des Transactions</h2>
+      <div id="transactions-list"></div>
+
+      <!-- Message d'alerte si le solde est inférieur au seuil bas -->
+      <h2>Notifications du solde bas</h2>
+      <div id="low-balance-alert" class="alert" style="display: none">
+        <p>
+          Attention ! Le solde est inférieur au seuil défini pour ce compte.
+        </p>
+      </div>
+    </div>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/account.js"></script>
+  </body>
+</html>
